@@ -7,38 +7,47 @@
         <title>Startpage</title>
 
         <link rel="stylesheet" href="./CSS/index.css">
+        <script src="Javascript/SearchManager.js"></script>
 
     </head>
     <body>
         <main class="main-row-list">
             <div class="main-row">
-                <div class="main-time">January 26 4:11 AM</article>
+                <div class="main-time">January 26 4:11 AM</div>
+            </div>
+            <div class="main-row">
                 <div class="main-search">
                     <div class="main-search-engine">
-                        <button class="search-engine-button">Startpage</button>
-                        <button class="search-engine-button">Youtube</button>
-                        <button class="search-engine-button">Wolfram Alpha</button>
-                        <button class="search-engine-button">Wikipedia</button>
+                        <button onclick="SetSearchEngine('https://www.startpage.com/sp/search?query=%s', event)" class="search-engine-button active-search"><img class="search-engine-icon" src="./Images/StartpageIcon.png" alt="Startpage"></button>
+                        <button onclick="SetSearchEngine('https://www.youtube.com/results?search_query=%s', event)" class="search-engine-button"><img class="search-engine-icon" src="./Images/YoutubeIcon.png" alt="Youtube"></button>
+                        <button onclick="SetSearchEngine('https://www.wolframalpha.com/input?i=%s', event)" class="search-engine-button"><img class="search-engine-icon" src="./Images/WolframAlphaIcon.png" alt="Wolfram Alpha"></button>
+                        <button onclick="SetSearchEngine('https://en.wikipedia.org/w/index.php?title=Special:Search&search=%s', event)" class="search-engine-button"><img class="search-engine-icon" src="./Images/WikipediaIcon.png" alt="Wikipedia"></button>
                     </div>
                     <div class="main-search-bar">
-                        <input type="text">
+                        <input type="text" class="search-input" onkeydown="SearchCheckEnter(event)" placeholder="Search" id="search-input" data-search-url="https://www.startpage.com/sp/search?query=%s">
+                        <button class="search-button" onclick="Search()"><img src="Images/SearchIcon.png" alt="Search"></button>
                     </div>
                 </div>
             </div>
             <div class="main-row">
                 <div class="main-grid">
-                    <button class="main-grid-element">youtube</button>
-                    <button class="main-grid-element">gmail</button>
-                    <button class="main-grid-element">OpenAi</button>
-                    <button class="main-grid-element">Wikipedia</button>
-                    <button class="main-grid-element">Wiki.gg</button>
-                    <button class="main-grid-element">Nexusmods</button>
-                    <button class="main-grid-element">JustWatch</button>
-                    <button class="main-grid-element">Wells Fargo</button>
-                    <button class="main-grid-element">Capital One</button>
-                    <button class="main-grid-element">Paypal</button>
+                    <a href="https://youtube.com" class="main-grid-element">Youtube</a>
+                    <a href="https://wikipedia.com" class="main-grid-element">Wikipedia</a>
+                    <a href="https://wellsfargo.com" class="main-grid-element">Wells Fargo</a>
+                    <a href="https://gmail.com" class="main-grid-element">Gmail</a>
+                    <a href="https://wiki.gg/wikis" class="main-grid-element">Wiki.gg</a>
+                    <a href="https://capitalone.com" class="main-grid-element">Capital One</a>
+                    <a href="https://instagram.com" class="main-grid-element">Instagram</a>
+                    <a href="https://nexusmods.com/skyrimspecialedition" class="main-grid-element">Nexusmods</a>
+                    <a href="https://paypal.com" class="main-grid-element">Paypal</a>
+                    <a href="https://openai.com" class="main-grid-element">OpenAi</a>
+                    <a href="https://justwatch.com" class="main-grid-element">JustWatch</a>
                 </div>
             </div>
         </main>
+        <div class="spacer"></div>
+        <footer>
+            <p>&copy; 2024 Startpage. GNU GPT v3 <a href="LICENSE"> LICENSE</a>. Icons by <a href="https://www.icons8.com">icons8</a> </p>
+        </footer>
     </body>
 </html>
