@@ -32,6 +32,8 @@ body {
 
 .main-time {
     text-align: center;
+    color: var(--primary-accent);
+    font-size: xx-large;
 }
 
 .main-search-engine {
