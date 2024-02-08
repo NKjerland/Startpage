@@ -12,8 +12,8 @@ function UpdateTime() {
 
     // Format hour and minute with AM/PM
     const ampm = hour >= 12 ? 'PM' : 'AM';
-    const formattedHour = PadZero(hour % 12 === 0 ? 12 : hour % 12);
-    const formattedMinute = minute;
+    const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+    const formattedMinute = PadZero(minute);
 
     // Construct the formatted string
     const formattedDateTime =  month + ' ' + day + ' ' + formattedHour + ':' + formattedMinute + ' ' + ampm;
