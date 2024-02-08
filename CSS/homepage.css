@@ -162,3 +162,10 @@ footer {
 a {
     color: rgb(31, 31, 31);
 }
+
+@media (max-width: 850px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+}
